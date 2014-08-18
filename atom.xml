@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[My Octopress Blog]]></title>
+  <title><![CDATA[我是松哥]]></title>
   <link href="http://wods.github.io/atom.xml" rel="self"/>
   <link href="http://wods.github.io/"/>
-  <updated>2014-08-18T18:02:22+08:00</updated>
+  <updated>2014-08-18T18:31:40+08:00</updated>
   <id>http://wods.github.io/</id>
   <author>
-    <name><![CDATA[Your Name]]></name>
+    <name><![CDATA[松哥]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
   
   <entry>
-    <title type="html"><![CDATA[Test]]></title>
+    <title type="html"><![CDATA[test]]></title>
     <link href="http://wods.github.io/blog/2014/08/18/test/"/>
     <updated>2014-08-18T17:51:05+08:00</updated>
     <id>http://wods.github.io/blog/2014/08/18/test</id>
