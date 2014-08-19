@@ -4,7 +4,7 @@
   <title><![CDATA[我是松哥]]></title>
   <link href="http://wods.github.io/atom.xml" rel="self"/>
   <link href="http://wods.github.io/"/>
-  <updated>2014-08-19T10:26:02+08:00</updated>
+  <updated>2014-08-19T11:46:32+08:00</updated>
   <id>http://wods.github.io/</id>
   <author>
     <name><![CDATA[松哥]]></name>
@@ -18,7 +18,27 @@
     <link href="http://wods.github.io/blog/2014/08/19/the-research-of-how-to-use-swp-sim-card-in-nexus-5/"/>
     <updated>2014-08-19T10:24:15+08:00</updated>
     <id>http://wods.github.io/blog/2014/08/19/the-research-of-how-to-use-swp-sim-card-in-nexus-5</id>
-    <content type="html"><![CDATA[
+    <content type="html"><![CDATA[<p>首先给出结论。
+4.4.3和4.4.4必须使用4.4.2的基带，并且修改配置文件后才能使用手机刷公交。</p>
+
+<p>4.4.2基带的下载链接 <a href="http://pan.baidu.com/share/link?shareid=96385327&amp;uk=1477253311">http://pan.baidu.com/share/link?shareid=96385327&amp;uk=1477253311</a> 提取码: ts3i
+4.4.3和4.4.4的修改文件在这里 <a href="http://bbs.gfan.com/forum.php?mod=redirect&amp;goto=findpost&amp;ptid=7257347&amp;pid=233665712">http://bbs.gfan.com/forum.php?mod=redirect&amp;goto=findpost&amp;ptid=7257347&amp;pid=233665712</a>
+4.4.2的修改文件在这里  <a href="http://bbs.gfan.com/forum.php?mod=redirect&amp;goto=findpost&amp;ptid=7257347&amp;pid=217798101">http://bbs.gfan.com/forum.php?mod=redirect&amp;goto=findpost&amp;ptid=7257347&amp;pid=217798101</a>
+修改方式就是将
+\system\etc\libnfc-brcm-20791b05.conf
+\system\etc\libnfc-brcm.conf
+两个文件中关于UICC的部分启用。
+APK文件是为了关屏也能刷卡，可以不刷。</p>
+
+<p>最恼人的就是必须使用4.4.2的基带才可以实现，之前因为4.4.4的基带已经可以开启移动4G了，所以一直没动，烦恼了一周。
+<a href="http://www.nfcbrief.com/2013/07/think-twice-about-buying-nexus-if-you.html">http://www.nfcbrief.com/2013/07/think-twice-about-buying-nexus-if-you.html</a>
+这篇文章详细的介绍了Nexus系列为什么不能直接使用NFC-SIM。
+“Access to the SIM requires special adaptations in the baseband firmware (plain APDU access), ”
+读取SIM卡中的SE（NFC中的安全模块，NFC-SIM卡就是在SIM卡中，N5默认读的是机器中的SE）需要基带的支持，而在4.4.3中这一步被限制了，无法直接读取，所以必须使用4.4.2的基带才可以。
+文章中还提到第三方已经尝试将读取SIM卡中的SE代码提交给Google，可惜一直没有人回复，而4.4.3中又做了进一步限制，感觉Google很不乐意接受SE在SIM卡中的解决方案，前景有些悲观。</p>
+
+<p>再补充下为什么不能使用和包，这篇英文也讲到了，使用和包需要支持SIM Alliance Open Mobile API，厂商一般都是通过直接集成seek for android代码来支持。而N5没有集成，也就不能支持。
+我在stackoverflow上看到已经有人尝试给集成代码N5，感觉最大的问题还是如何访问sim卡。不过n5已经支持直接读取sim卡上的se，说不定还真可以使用seek for android</p>
 ]]></content>
   </entry>
   
