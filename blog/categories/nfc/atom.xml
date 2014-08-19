@@ -4,7 +4,7 @@
   <title><![CDATA[Category: nfc | 我是松哥]]></title>
   <link href="http://wods.github.io/blog/categories/nfc/atom.xml" rel="self"/>
   <link href="http://wods.github.io/"/>
-  <updated>2014-08-19T11:50:45+08:00</updated>
+  <updated>2014-08-19T11:53:59+08:00</updated>
   <id>http://wods.github.io/</id>
   <author>
     <name><![CDATA[松哥]]></name>
@@ -21,11 +21,11 @@
     <content type="html"><![CDATA[<p>首先给出结论。
 4.4.3和4.4.4必须使用4.4.2的基带，并且修改配置文件后才能使用手机刷公交。</p>
 
-<p>4.4.2基带的下载链接 <a href="http://pan.baidu.com/share/link?shareid=96385327&amp;uk=1477253311">http://pan.baidu.com/share/link?shareid=96385327&amp;uk=1477253311</a> 提取码: ts3i</p>
+<p>4.4.2基带的<a href="http://pan.baidu.com/share/link?shareid=96385327&amp;uk=1477253311">下载链接</a> 提取码: ts3i</p>
 
-<p>4.4.3和4.4.4的修改文件在这里 <a href="http://bbs.gfan.com/forum.php?mod=redirect&amp;goto=findpost&amp;ptid=7257347&amp;pid=233665712">http://bbs.gfan.com/forum.php?mod=redirect&amp;goto=findpost&amp;ptid=7257347&amp;pid=233665712</a></p>
+<p>4.4.3和4.4.4的修改文件在<a href="http://bbs.gfan.com/forum.php?mod=redirect&amp;goto=findpost&amp;ptid=7257347&amp;pid=233665712">这里</a></p>
 
-<p>4.4.2的修改文件在这里  <a href="http://bbs.gfan.com/forum.php?mod=redirect&amp;goto=findpost&amp;ptid=7257347&amp;pid=217798101">http://bbs.gfan.com/forum.php?mod=redirect&amp;goto=findpost&amp;ptid=7257347&amp;pid=217798101</a></p>
+<p>4.4.2的修改文件在<a href="http://bbs.gfan.com/forum.php?mod=redirect&amp;goto=findpost&amp;ptid=7257347&amp;pid=217798101">这里</a></p>
 
 <p>修改方式就是将</p>
 
@@ -38,8 +38,7 @@ APK文件是为了关屏也能刷卡，可以不刷。</p>
 
 <p>最恼人的就是必须使用4.4.2的基带才可以实现，之前因为4.4.4的基带已经可以开启移动4G了，所以一直没动，烦恼了一周。</p>
 
-<p><a href="http://www.nfcbrief.com/2013/07/think-twice-about-buying-nexus-if-you.html">http://www.nfcbrief.com/2013/07/think-twice-about-buying-nexus-if-you.html</a>
-这篇文章详细的介绍了Nexus系列为什么不能直接使用NFC-SIM。</p>
+<p><a href="http://www.nfcbrief.com/2013/07/think-twice-about-buying-nexus-if-you.html">这篇文章</a>详细的介绍了Nexus系列为什么不能直接使用NFC-SIM。</p>
 
 <p>“Access to the SIM requires special adaptations in the baseband firmware (plain APDU access), ”</p>
 
