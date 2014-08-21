@@ -91,16 +91,23 @@ By using &ldquo;Dump HPROF file&rdquo; tool in DDMS, I found some objects are re
 
 <p>We have an object A, and A have a reference to a activty B. A will be recreated during refresh, while B won&rsquo;t. And we have some code like this.</p>
 
-<pre><code>A.B.runUiThread();
-</code></pre>
+<div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="n">A</span><span class="o">.</span><span class="na">B</span><span class="o">.</span><span class="na">runUiThread</span><span class="o">();</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
 
 <p>Even A is no longer needed, the system will still hold the reference to it.</p>
 
 <p>The solution is simple.</p>
 
-<pre><code>Activity lB = A.B;
-lB.runUiThread();
-</code></pre>
+<div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="n">Activity</span> <span class="n">lB</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="na">B</span><span class="o">;</span>
+</span><span class='line'><span class="n">lB</span><span class="o">.</span><span class="na">runUiThread</span><span class="o">();</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+
+<p></p>
 </div>
 
 </article>
