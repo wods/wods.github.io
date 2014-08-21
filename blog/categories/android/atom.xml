@@ -4,7 +4,7 @@
   <title><![CDATA[Category: android | 我是松哥]]></title>
   <link href="http://wods.github.io/blog/categories/android/atom.xml" rel="self"/>
   <link href="http://wods.github.io/"/>
-  <updated>2014-08-19T11:55:12+08:00</updated>
+  <updated>2014-08-21T11:12:57+08:00</updated>
   <id>http://wods.github.io/</id>
   <author>
     <name><![CDATA[松哥]]></name>
@@ -12,6 +12,29 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Memory leak of java.lang.ref.FinalizerReference on android]]></title>
+    <link href="http://wods.github.io/blog/2014/08/21/memory-leak-ofjava-dot-lang-dot-ref-dot-finalizerreference-on-android/"/>
+    <updated>2014-08-21T09:56:41+08:00</updated>
+    <id>http://wods.github.io/blog/2014/08/21/memory-leak-ofjava-dot-lang-dot-ref-dot-finalizerreference-on-android</id>
+    <content type="html"><![CDATA[<p>Recently I&rsquo;m working on a memory leak issue of Android.
+By using &ldquo;Dump HPROF file&rdquo; tool in DDMS, I found some objects are retained by java.lang.ref.FinalizerReference. After some investgation, I found the reason.</p>
+
+<p>We have an object A, and A have a reference to a activty B. A will be recreated during refresh, while B won&rsquo;t. And we have some code like this.</p>
+
+<pre><code>A.B.runUiThread();
+</code></pre>
+
+<p>Even A is no longer needed, the system will still hold the reference to it.</p>
+
+<p>The solution is simple.</p>
+
+<pre><code>Activity lB = A.B;
+lB.runUiThread();
+</code></pre>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Nexus 5使用SWP-SIM卡刷公交的小小的研究]]></title>
